@@ -54,7 +54,7 @@ def main():
     selected_page = streamlit_option_menu.option_menu(menu_title=None,
                                                       options=['Data','Analysis'],
                                                       icons=['activity','bar-chart'],
-                                                      menu_icon='list',default_index=1,
+                                                      menu_icon='list',default_index=0,
                                                       orientation='horizontal',
                                                       styles={
                                                           'container':        {'padding':'0!important',             'background-color':'#white'},
@@ -266,38 +266,3 @@ def main():
                  
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  
