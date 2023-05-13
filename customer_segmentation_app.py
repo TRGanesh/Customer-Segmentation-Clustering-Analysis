@@ -248,6 +248,7 @@ def main():
                 st.write('- Customers who are belonging to 2nd Cluster,thier Amount Spent ranges from 320 to 930 and Income ranges from 45k to 70k')
                 st.write('- Customers who are belonging to 1st Cluster,thier Amount Spent ranges roughly from 1200 to 1920 and Income ranges from 70k to 90k')
                 st.write('- Also,we can see more overlapping between Cluster2 and Cluster1 data points')
+        st.write('- - -')        
         with st.container():
             plot_subheader2(('Distribution plots of Amount Spent and Income of Customer based on their Cluster'))
             fig,axes = plt.subplots(1,2,dpi=280,figsize=(13,4))
