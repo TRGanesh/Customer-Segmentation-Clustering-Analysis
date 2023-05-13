@@ -39,7 +39,7 @@ def load_lottier(url):
     return r.json()
 
 # LOADING DATASET
-df = pd.read_csv('/Users/mac/Downloads/Model_Deployment_1/Customer_Segmentation_KMeans_Agglomarative_Clustering/marketing_campaign.csv.xls',sep='\t')
+df = pd.read_csv('marketing_campaign.csv.xls',sep='\t')
 df.drop(columns=['Z_CostContact','Z_Revenue'],inplace=True)
 
 def main():
@@ -48,7 +48,7 @@ def main():
     def local_css(css_filename):
         with open(css_filename) as f:
             st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
-    local_css('/Users/mac/Downloads/Model_Deployment_1/Customer_Segmentation_KMeans_Agglomarative_Clustering/style.css')     
+    local_css('style.css')     
     
     # CREATING NAVIGATION BAR WITH OPTION MENU 
     selected_page = streamlit_option_menu.option_menu(menu_title=None,
@@ -92,7 +92,7 @@ def main():
                 st.write("Machine Learning can be divided majorly into **:orange[Supervised Machine Learning]**,**:orange[Unsupervised Machine Learning]**,**:orange[Semi-Supervised Machine Learning]**,**:orange[Reinforcement Machine Learning]**.In Supervised Machine Learning,models get trained by using labeled data.That means,model gets trained by X features and Y target.But it's not the case with Unsupervised Machine Learning,here the data is not pre-labeled.Here,models do find hidden patterns and insights from data.The goal of Unsupervised Machine Learning is to find the underlying structure of dataset,group the data according to the similarities and to represent the data in a compressed format.")
                 st.write("Some of the Unsupervised Machine Learning Algorithms are **:orange[K-Means Clustering]**,**:orange[Hierarchical Clustering]**,**:orange[Principal Component Analysis(Dimensionality Reduction Technique)]**.")
             with image_column:
-                st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Customer_Segmentation_KMeans_Agglomarative_Clustering/Unsupervised_ML_image.png.webp'),width=500,use_column_width=True)
+                st.image(Image.open('Unsupervised_ML_image.png.webp'),width=500,use_column_width=True)
                 
                     
         header('Customer Segmentation')
@@ -105,7 +105,7 @@ def main():
                 st.write(' ')
                 st.write("Customer Segmentation simply means grouping customers according to various characteristics(for example grouping customers by age).It's a way for Business Organizations to understand thier customers.Knowing the differences between customer groups,it's easier to make strategic decisions regarding the product growth and marketing.It can also be said as Customer Personality Analysis.")
             with image_column:
-                st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Customer_Segmentation_KMeans_Agglomarative_Clustering/customer_segmentation_image.png.jpeg'),use_column_width=False,width=400)
+                st.image(Image.open('customer_segmentation_image.png.jpeg'),use_column_width=False,width=400)
                     
         # DISPLAYING DATASET
         header('Dataset')
@@ -151,7 +151,7 @@ def main():
         
         header('3D Visualization of Clusters')
         # READING DATAFRAME
-        principal_components_df = pd.read_csv('/Users/mac/Downloads/Model_Deployment_1/Customer_Segmentation_KMeans_Agglomarative_Clustering/principal_components_customer_seg.csv')  
+        principal_components_df = pd.read_csv('principal_components_customer_seg.csv')  
         principal_components_df['Clusters'] = principal_components_df['Clusters'].astype('O')
         # PLOTTING 3D SCATTER PLOT 
         with st.container():
@@ -195,7 +195,7 @@ def main():
                 st.write("K-Means Clustering algorithm groups the unlabeled data into different clusters.K denotes the number of clusters.It is a **Centroid-based** algorithm,where each cluster has a centriod.Main aim is to reduce the sum of squared distances between data points and their corresponding clusters i.e **:orange[With-in Cluster Sum of Squares(WCSS)]** distance.Consequently,maximizes the distance between cluster-cluster.")
                 st.write("For getting optimal number of clusters,we use Elbow Method.In that method,for each value of K,it calculates WCSS distance.We can plot WCSS with K value,the plot looks like an Elbow.")
             with image_column:
-                st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Customer_Segmentation_KMeans_Agglomarative_Clustering/k-means_image.png')) 
+                st.image(Image.open('k-means_image.png')) 
         
         header('Hierarchical Clustering')
         with st.container():
@@ -205,7 +205,7 @@ def main():
                 st.write("Hierarchical Clustering is also known as Hierarchical Cluster Analysis.Here,we develop hierarchy of clusters in form of a tree.This tree-shaped structure is called **:orange[Dendrogram]**.")
                 st.write("I used Agglomarative Clustering approach for hierarchical clustering,it is a bottom-up approach,in which algorithm starts with taking all data points as single clusters and then starts mergeing closest pair of clusters together.It does this until all clusters are merged into a single cluster having all data points.")
             with image_column:
-                st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Customer_Segmentation_KMeans_Agglomarative_Clustering/hierarchical_clustering_image.jpeg'),use_column_width=True,width=1200)    
+                st.image(Image.open('hierarchical_clustering_image.jpeg'),use_column_width=True,width=1200)    
         
         header('Principal Component Analysis') 
         with st.container():
@@ -215,13 +215,13 @@ def main():
                     st.write("Principal Component Analysis is an unsupervised learning algorithm that is used for dimensionality reduction.It is a statistical process that converts observations of correlated features into a set of linearly uncorrelated features with the help of Orthogonal Transformation.Newly transformed features are called Principal Components.")
                     st.write("It tries to project higher dimensional data into lower dimensional data.Dimensionality Reduction is a type of feature extraction technique that aims to reduce the number of input features while retaining as much of the original information as possible.")
                with image_column:
-                    st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Customer_Segmentation_KMeans_Agglomarative_Clustering/principal_comp_analysis_image.png.jpeg'),use_column_width=True)
+                    st.image(Image.open('principal_comp_analysis_image.png.jpeg'),use_column_width=True)
         st.write('- - -')
         
         st.write("Let's see some plots based on clustering")
         # LOADING THE DATASET WHICH HAS NON-TRANSFORMED FEATURES WITH CLUSTER LABELS
         
-        df_with_pc_clusters = pd.read_csv('/Users/mac/Downloads/Model_Deployment_1/Customer_Segmentation_KMeans_Agglomarative_Clustering/df_PC_customer_seg.csv')
+        df_with_pc_clusters = pd.read_csv('df_PC_customer_seg.csv')
         
         df_with_pc_clusters['Cluster'] = df_with_pc_clusters['Cluster'].astype('O')
         # SCATTERPLOT OF INCOME AND AMOUNT SPENT BASED ON CLUSTERS
