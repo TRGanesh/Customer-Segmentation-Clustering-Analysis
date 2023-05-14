@@ -266,9 +266,9 @@ def main():
             st.write("- In each cluster group,the distribution's Inter-Quartile range(the rectangle in middle) is not overlapping.")
             st.write('- Inter-Quartile range tells us the spread of middle half of the distribution.Basically,it is the difference between First quartile and Third quartile.')
         
-         st.write('- - -')
+        st.write('- - -')
             
-         with st.container():
+        with st.container():
                 
             plot_subheader2(('Distribution plots of Amount Spent by Customers on different items based on their Cluster'))
                 
