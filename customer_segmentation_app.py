@@ -205,7 +205,7 @@ def main():
                 st.write("Hierarchical Clustering is also known as Hierarchical Cluster Analysis.Here,we develop hierarchy of clusters in form of a tree.This tree-shaped structure is called **:orange[Dendrogram]**.")
                 st.write("I used Agglomarative Clustering approach for hierarchical clustering,it is a bottom-up approach,in which algorithm starts with taking all data points as single clusters and then starts mergeing closest pair of clusters together.It does this until all clusters are merged into a single cluster having all data points.")
             with image_column:
-                st.image(Image.open('hierarchical_clustering_image.jpeg'),use_column_width=False,width=1200)    
+                st.image(Image.open('hierarchical_clustering_image.jpeg'),use_column_width=False,width=550)    
         
         header('Principal Component Analysis') 
         with st.container():
