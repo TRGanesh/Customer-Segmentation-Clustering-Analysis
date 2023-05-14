@@ -197,7 +197,7 @@ def main():
             with image_column:
                 k_means_image = Image.open('k-means_image.png')
                 new_k_means_image = k_means_image.resize((500,500))
-                st.image(new_k_means_image)
+                st.image(new_k_means_image,use_column_width=True)
         
         header('Hierarchical Clustering')
         with st.container():
