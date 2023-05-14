@@ -196,7 +196,7 @@ def main():
                 st.write("For getting optimal number of clusters,we use Elbow Method.In that method,for each value of K,it calculates WCSS distance.We can plot WCSS with K value,the plot looks like an Elbow.")
             with image_column:
                 k_means_image = Image.open('k-means_image.png')
-                new_k_means_image = Image.resize((500,500))
+                new_k_means_image = k_means_image.resize((500,500))
                 st.image(new_k_means_image)
         
         header('Hierarchical Clustering')
