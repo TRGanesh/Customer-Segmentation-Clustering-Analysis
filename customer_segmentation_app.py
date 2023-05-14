@@ -195,7 +195,9 @@ def main():
                 st.write("K-Means Clustering algorithm groups the unlabeled data into different clusters.K denotes the number of clusters.It is a **Centroid-based** algorithm,where each cluster has a centriod.Main aim is to reduce the sum of squared distances between data points and their corresponding clusters i.e **:orange[With-in Cluster Sum of Squares(WCSS)]** distance.Consequently,maximizes the distance between cluster-cluster.")
                 st.write("For getting optimal number of clusters,we use Elbow Method.In that method,for each value of K,it calculates WCSS distance.We can plot WCSS with K value,the plot looks like an Elbow.")
             with image_column:
-                st.image(Image.open('k-means_image.png'),width=550) 
+                k_means_image = Image.open('k-means_image.png')
+                new_k_means_image = Image.resize((500,500))
+                st.image(new_k_means_image)
         
         header('Hierarchical Clustering')
         with st.container():
