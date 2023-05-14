@@ -313,6 +313,6 @@ def main():
             st.write('- Customers of cluster 1 are spending more amount on each item')
             st.write('- Customers of cluster 0 are spending less amount on each item') 
             st.write('- Customers of cluster 2 are spending less amount on Meat') 
-            st.write('- Distribution of amount spent on Fruits and Fish is nearly same')         
+            st.write('- Distribution of amount spent on Fruits and Fish is nearly same for 3 clusters')         
 if __name__ == '__main__':
     main()
