@@ -92,7 +92,7 @@ def main():
                 st.write("Machine Learning can be divided majorly into **:orange[Supervised Machine Learning]**,**:orange[Unsupervised Machine Learning]**,**:orange[Semi-Supervised Machine Learning]**,**:orange[Reinforcement Machine Learning]**.In Supervised Machine Learning,models get trained by using labeled data.That means,model gets trained by X features and Y target.But it's not the case with Unsupervised Machine Learning,here the data is not pre-labeled.Here,models do find hidden patterns and insights from data.The goal of Unsupervised Machine Learning is to find the underlying structure of dataset,group the data according to the similarities and to represent the data in a compressed format.")
                 st.write("Some of the Unsupervised Machine Learning Algorithms are **:orange[K-Means Clustering]**,**:orange[Hierarchical Clustering]**,**:orange[Principal Component Analysis(Dimensionality Reduction Technique)]**.")
             with image_column:
-                st.image(Image.open('Unsupervised_ML_image.png.webp'),width=500,use_column_width=False)
+                st.image(Image.open('Unsupervised_ML_image.png.webp'),width=800,use_column_width=False)
                 
                     
         header('Customer Segmentation')
