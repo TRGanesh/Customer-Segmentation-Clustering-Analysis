@@ -195,7 +195,7 @@ def main():
                 st.write("K-Means Clustering algorithm groups the unlabeled data into different clusters.K denotes the number of clusters.It is a **Centroid-based** algorithm,where each cluster has a centriod.Main aim is to reduce the sum of squared distances between data points and their corresponding clusters i.e **:orange[With-in Cluster Sum of Squares(WCSS)]** distance.Consequently,maximizes the distance between cluster-cluster.")
                 st.write("For getting optimal number of clusters,we use Elbow Method.In that method,for each value of K,it calculates WCSS distance.We can plot WCSS with K value,the plot looks like an Elbow.")
             with image_column:
-                st.image(Image.open('k-means_image.png'),width=700) 
+                st.image(Image.open('k-means_image.png'),width=550) 
         
         header('Hierarchical Clustering')
         with st.container():
@@ -205,7 +205,7 @@ def main():
                 st.write("Hierarchical Clustering is also known as Hierarchical Cluster Analysis.Here,we develop hierarchy of clusters in form of a tree.This tree-shaped structure is called **:orange[Dendrogram]**.")
                 st.write("I used Agglomarative Clustering approach for hierarchical clustering,it is a bottom-up approach,in which algorithm starts with taking all data points as single clusters and then starts mergeing closest pair of clusters together.It does this until all clusters are merged into a single cluster having all data points.")
             with image_column:
-                st.image(Image.open('hierarchical_clustering_image.jpeg'),use_column_width=False,width=550)    
+                st.image(Image.open('hierarchical_clustering_image.jpeg'),width=550)    
         
         header('Principal Component Analysis') 
         with st.container():
