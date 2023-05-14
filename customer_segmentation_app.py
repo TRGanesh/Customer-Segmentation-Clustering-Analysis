@@ -265,6 +265,54 @@ def main():
             st.write('From above Boxen plots,we can observe')
             st.write("- In each cluster group,the distribution's Inter-Quartile range(the rectangle in middle) is not overlapping.")
             st.write('- Inter-Quartile range tells us the spread of middle half of the distribution.Basically,it is the difference between First quartile and Third quartile.')
-                 
+        
+         st.write('- - -')
+            
+         with st.container():
+                
+            plot_subheader2(('Distribution plots of Amount Spent by Customers on different items based on their Cluster'))
+                
+            sns.set(rc={"axes.facecolor":"#000000","figure.facecolor":"#ccffff"})
+                
+            fig = plt.figure(figsize=(13,12),dpi=200)
+            ax1 = fig.add_subplot(3,2,1)
+            sns.boxenplot(data=df_with_pc_clusters,y='MntFruits',x='Cluster',palette='Spectral_r')
+            ax1.grid(False)
+            ax1.set_ylabel('Amount spent on Fruits')
+                
+            ax2 = fig.add_subplot(3,2,2)
+            sns.boxenplot(data=df_with_pc_clusters,y='MntMeatProducts',x='Cluster',palette='Spectral_r')
+            ax2.grid(False)
+            ax2.set_ylabel('Amount spent on Meat')
+                
+            ax3 = fig.add_subplot(3,2,3)
+            sns.boxenplot(data=df_with_pc_clusters,y='MntFishProducts',x='Cluster',palette='Spectral_r')
+            ax3.grid(False)
+            ax3.set_ylabel('Amount spent on Fish')
+                
+            ax4 = fig.add_subplot(3,2,4)
+            sns.boxenplot(data=df_with_pc_clusters,y='MntSweetProducts',x='Cluster',palette='Spectral_r')
+            ax4.grid(False)
+            ax4.set_ylabel('Amount spent on Sweet Products')
+                
+            ax5 = fig.add_subplot(3,2,5)
+            sns.boxenplot(data=df_with_pc_clusters,y='MntGoldProds',x='Cluster',palette='Spectral_r')
+            ax5.set_ylabel('Amount spent on Gold')
+            ax5.grid(False)
+                
+            ax6 = fig.add_subplot(3,2,6)
+            sns.boxenplot(data=df_with_pc_clusters,y='MntWines',x='Cluster',palette='Spectral_r')
+            ax6.grid(False)
+            ax6.set_ylabel('Amount spent on Wine')
+                
+            plt.tight_layout()
+            st.pyplot(fig)
+            
+            inference_subheader('Inference') 
+            st.write('From above Boxen plots,we can observe') 
+            st.write('- Customers of cluster 1 are spending more amount on each item')
+            st.write('- Customers of cluster 0 are spending less amount on each item') 
+            st.write('- Customers of cluster 2 are spending less amount on Meat') 
+            st.write('- Distribution of amount spent on Fruits and Fish is nearly same')         
 if __name__ == '__main__':
     main()
