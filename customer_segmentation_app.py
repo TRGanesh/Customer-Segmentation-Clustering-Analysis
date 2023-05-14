@@ -92,7 +92,7 @@ def main():
                 st.write("Machine Learning can be divided majorly into **:orange[Supervised Machine Learning]**,**:orange[Unsupervised Machine Learning]**,**:orange[Semi-Supervised Machine Learning]**,**:orange[Reinforcement Machine Learning]**.In Supervised Machine Learning,models get trained by using labeled data.That means,model gets trained by X features and Y target.But it's not the case with Unsupervised Machine Learning,here the data is not pre-labeled.Here,models do find hidden patterns and insights from data.The goal of Unsupervised Machine Learning is to find the underlying structure of dataset,group the data according to the similarities and to represent the data in a compressed format.")
                 st.write("Some of the Unsupervised Machine Learning Algorithms are **:orange[K-Means Clustering]**,**:orange[Hierarchical Clustering]**,**:orange[Principal Component Analysis(Dimensionality Reduction Technique)]**.")
             with image_column:
-                st.image(Image.open('Unsupervised_ML_image.png.webp'),width=650,use_column_width=False)
+                st.image(Image.open('Unsupervised_ML_image.png.webp'),width=650,use_column_width=True)
                 
                     
         header('Customer Segmentation')
@@ -196,8 +196,7 @@ def main():
                 st.write("For getting optimal number of clusters,we use Elbow Method.In that method,for each value of K,it calculates WCSS distance.We can plot WCSS with K value,the plot looks like an Elbow.")
             with image_column:
                 k_means_image = Image.open('k-means_image.png')
-                new_k_means_image = k_means_image.resize((500,400))
-                st.image(new_k_means_image)
+                st.image(k_means_image,use_column_width=True)
         
         header('Hierarchical Clustering')
         with st.container():
@@ -207,7 +206,7 @@ def main():
                 st.write("Hierarchical Clustering is also known as Hierarchical Cluster Analysis.Here,we develop hierarchy of clusters in form of a tree.This tree-shaped structure is called **:orange[Dendrogram]**.")
                 st.write("I used Agglomarative Clustering approach for hierarchical clustering,it is a bottom-up approach,in which algorithm starts with taking all data points as single clusters and then starts mergeing closest pair of clusters together.It does this until all clusters are merged into a single cluster having all data points.")
             with image_column:
-                st.image(Image.open('hierarchical_clustering_image.jpeg'),width=550)    
+                st.image(Image.open('hierarchical_clustering_image.jpeg'),width=550,use_column_width=True)    
         
         header('Principal Component Analysis') 
         with st.container():
